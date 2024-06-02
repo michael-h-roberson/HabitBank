@@ -14,6 +14,10 @@
 		0C7981952C076E6800D96040 /* HabitBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7981942C076E6800D96040 /* HabitBankTests.swift */; };
 		0C79819F2C076E6800D96040 /* HabitBankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C79819E2C076E6800D96040 /* HabitBankUITests.swift */; };
 		0C7981A12C076E6800D96040 /* HabitBankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7981A02C076E6800D96040 /* HabitBankUITestsLaunchTests.swift */; };
+		0C7981B02C07709800D96040 /* HabitBankTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7981AF2C07709800D96040 /* HabitBankTabView.swift */; };
+		0C7981B22C0771DF00D96040 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7981B12C0771DF00D96040 /* HomeView.swift */; };
+		0C7981B42C0772E000D96040 /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7981B32C0772E000D96040 /* ActivityCard.swift */; };
+		0C7981B62C0778CC00D96040 /* Health Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7981B52C0778CC00D96040 /* Health Manager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,11 @@
 		0C79819A2C076E6800D96040 /* HabitBankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitBankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C79819E2C076E6800D96040 /* HabitBankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitBankUITests.swift; sourceTree = "<group>"; };
 		0C7981A02C076E6800D96040 /* HabitBankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitBankUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0C7981AF2C07709800D96040 /* HabitBankTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitBankTabView.swift; sourceTree = "<group>"; };
+		0C7981B12C0771DF00D96040 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0C7981B32C0772E000D96040 /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		0C7981B52C0778CC00D96040 /* Health Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Health Manager.swift"; sourceTree = "<group>"; };
+		0C7981B72C077E3300D96040 /* HabitBank.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HabitBank.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +83,11 @@
 		0C7981772C076E6600D96040 = {
 			isa = PBXGroup;
 			children = (
+				0C7981B52C0778CC00D96040 /* Health Manager.swift */,
 				0C7981822C076E6600D96040 /* HabitBank */,
+				0C7981AF2C07709800D96040 /* HabitBankTabView.swift */,
+				0C7981B12C0771DF00D96040 /* HomeView.swift */,
+				0C7981B32C0772E000D96040 /* ActivityCard.swift */,
 				0C7981932C076E6800D96040 /* HabitBankTests */,
 				0C79819D2C076E6800D96040 /* HabitBankUITests */,
 				0C7981812C076E6600D96040 /* Products */,
@@ -94,6 +107,7 @@
 		0C7981822C076E6600D96040 /* HabitBank */ = {
 			isa = PBXGroup;
 			children = (
+				0C7981B72C077E3300D96040 /* HabitBank.entitlements */,
 				0C7981832C076E6600D96040 /* HabitBankApp.swift */,
 				0C7981852C076E6600D96040 /* ContentView.swift */,
 				0C7981872C076E6800D96040 /* Assets.xcassets */,
@@ -257,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C7981B02C07709800D96040 /* HabitBankTabView.swift in Sources */,
+				0C7981B22C0771DF00D96040 /* HomeView.swift in Sources */,
+				0C7981B62C0778CC00D96040 /* Health Manager.swift in Sources */,
 				0C7981862C076E6600D96040 /* ContentView.swift in Sources */,
 				0C7981842C076E6600D96040 /* HabitBankApp.swift in Sources */,
+				0C7981B42C0772E000D96040 /* ActivityCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,12 +437,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HabitBank/HabitBank.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HabitBank/Preview Content\"";
 				DEVELOPMENT_TEAM = 3B4728B37G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow access to enjoy all features of our application.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,12 +468,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HabitBank/HabitBank.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HabitBank/Preview Content\"";
 				DEVELOPMENT_TEAM = 3B4728B37G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Please allow access to enjoy all features of our application.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
